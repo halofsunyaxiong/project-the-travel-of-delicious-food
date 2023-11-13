@@ -1,0 +1,264 @@
+/* リセット部分CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: rgb(152, 115, 115);
+  list-style: none;
+}
+
+body {
+  background-color: #9eb7d5;
+  min-height: 200vh;
+  font-family: 'ヒラギノ角ゴシック', 'Hiragino Sans', YuGothic, 'Yu Gothic', sans-serif;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ナビゲーション<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.navigation {
+  display: flex;
+  width: calc(100% -48px);
+  height: 120px;
+  margin: 0 auto;
+  padding: 0 24px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  /* ナビゲーション部分のシャドー */
+  background-color: #acbaca;
+  z-index: 1;
+  box-shadow: 30px 30px 30px -10px rgba(0, 0, 0, 0.15),
+    /* inset は　内シャドー */
+    inset 15px 15px 10px rgba(225, 225, 225, 0.35),
+    -15px -15px 35px rgba(225, 225, 225, 0.55),
+    inset -1px -1px 10px rgba(0, 0, 0, 0.25);
+}
+
+.logo_txt a {
+  display: inline;
+  font-size: 30px;
+  font-weight: 1000;
+  /*シャドー  */
+  color: #fff;
+  z-index: 1;
+  letter-spacing: 10px;
+  text-shadow: 5px 5px 0 rgb(93, 88, 88);
+}
+
+.item_nav li {
+  display: inline;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 10px 10px;
+  border-radius: 10px;
+  /*シャドー  */
+  background-color: #c9d5e0;
+  z-index: 1;
+  box-shadow: 30px 30px 30px -10px rgba(0, 0, 0, 0.15),
+    inset 15px 15px 10px rgba(225, 225, 225, 0.75),
+    -15px -15px 35px rgba(225, 225, 225, 0.55),
+    inset -1px -1px 10px rgba(0, 0, 0, 0.25);
+}
+
+.item_nav a:hover {
+  color: #3300ff;
+}
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>header の容器。この部分はjsガあるので、idを使う <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+#header {
+  width: 60rem;
+  height: 30rem;
+  margin: 100px auto 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  /* header部分のシャドー */
+  background-color: #c9d5e0;
+  z-index: 1;
+  box-shadow: 30px 30px 30px -10px rgba(0, 0, 0, 0.15),
+    inset 15px 15px 10px rgba(225, 225, 225, 0.75),
+    -15px -15px 35px rgba(225, 225, 225, 0.55),
+    inset -1px -1px 10px rgba(0, 0, 0, 0.25);
+}
+
+#carousel {
+  width: 60rem;
+  height: 25rem;
+  position: absolute;
+  margin: 2.5rem 0 0 0;
+  left: 0;
+  display: flex;
+}
+
+#carousel div {
+  width: 60rem;
+  height: 25rem;
+  flex-shrink: 0;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+#imge1 {
+  background-image: url(../imges/fruit.jpg);
+
+}
+
+#imge2 {
+  background-image: url(../imges/bread.jpg);
+}
+
+#imge3 {
+  background-image: url(../imges/chess.jpg);
+}
+
+#imge4 {
+  background-image: url(../imges/pizza.jpg);
+}
+
+
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>content と　image　の容器 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.main_content {
+  display: grid;
+  /* 列は9部分に分かれる */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  /* 行は5部分に分かれる */
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px 10px;
+  justify-content: space-evenly;
+  justify-items: center;
+  margin: 100px 50px;
+}
+
+/* content と　image　の位置を固定する */
+.content1 {
+  grid-column: 1/12;
+  grid-row: 1/2;
+}
+
+.item1 {
+  grid-column: 13/18;
+  grid-row: 1/2;
+}
+
+.item2 {
+  grid-column: 1/5;
+  grid-row: 2/3;
+}
+
+.content2 {
+  grid-column: 6/18;
+  grid-row: 2/3;
+}
+
+.content3 {
+  grid-column: 1/12;
+  grid-row: 3/4;
+
+}
+
+.item3 {
+  grid-column: 13/18;
+  grid-row: 3/4;
+}
+
+.item4 {
+  grid-column: 1/5;
+  grid-row: 4/5;
+}
+
+.content4 {
+  grid-column: 6/18;
+  grid-row: 4/5;
+}
+
+.content5 {
+  grid-column: 1/18;
+  grid-row: 5/6;
+}
+
+.content1,
+.content2,
+.content3,
+.content4,
+.content5 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 10px;
+  /*シャドー  */
+  background-color: #c9d5e0;
+  z-index: 1;
+  box-shadow: 30px 30px 30px -10px rgba(0, 0, 0, 0.15),
+    inset 15px 15px 10px rgba(225, 225, 225, 0.75),
+    -15px -15px 35px rgba(225, 225, 225, 0.55),
+    inset -1px -1px 10px rgba(0, 0, 0, 0.25);
+}
+
+.info {
+  margin: 0 auto;
+  margin: 50px 50px;
+  border-radius: 10px;
+}
+
+.item1,
+.item2,
+.item3,
+.item4 {
+  width: 25rem;
+  height: 25rem;
+  position: relative;
+  border-radius: 10px;
+  padding: 10px 10px;
+  /* シャドー */
+  background-color: #c9d5e0;
+  z-index: 1;
+  box-shadow: 30px 30px 30px -10px rgba(0, 0, 0, 0.15),
+    inset 15px 15px 10px rgba(225, 225, 225, 0.75),
+    -15px -15px 35px rgba(225, 225, 225, 0.55),
+    inset -1px -1px 10px rgba(0, 0, 0, 0.25);
+}
+
+.picture img {
+  width: 23.5rem;
+  height: 23.5rem;
+  position: absolute;
+  margin: 0 auto;
+  object-fit: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  /* シャドー */
+  z-index: -2;
+  padding: 4px 4px;
+  box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.75);
+}
+
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> footerの容器<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.footer {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: burlywood;
+  z-index: 0.5;
+  box-shadow: 30px 30px 30px -10px rgba(0, 0, 0, 0.15),
+    inset 15px 15px 10px rgba(225, 225, 225, 0.55),
+    -15px -15px 35px rgba(225, 225, 225, 0.55),
+    inset -1px -1px 10px rgba(0, 0, 0, 0.25);
+}
+
+.footer p {
+  font-size: 2rem;
+  z-index: 1;
+  letter-spacing: 10px;
+  text-shadow: 2px 1px 0 rgb(239, 239, 239);
+}
